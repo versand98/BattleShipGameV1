@@ -22,7 +22,7 @@ while(isSunk === false) {
     guess = prompt("Get ready to fire! Enter a number between 0-6"); //Ask user for number input
     //The first if statement tests whether the user entered a number or not and if the number is bewteen 0-6 (inclusive)
     if (numberPattern.test(guess) && guess >= 0 && guess <= 6) {
-        alert("Number!");
+        console.log("Number!");
         guesses += 1; //Adds one more to the guesses variable only if the if conditions above are true
         console.log("Guess: " + guess + " Guesses: " + guesses);
         //Tests if the user input is NOT similar to the ships 3 random locations generated above (line 19-21)
@@ -54,3 +54,4 @@ while(isSunk === false) {
 
 }
 console.log("Guesses: " + guesses + ", Accuracy: " + roundAccuracy + "%")
+alert("Guesses: " + guesses + ", Accuracy: " + roundAccuracy + "%")
