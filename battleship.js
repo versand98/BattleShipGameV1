@@ -1,18 +1,18 @@
-//Random number between 0 and 4 (inclusive)
-function getRandomNo() {
-    return Math.floor(Math.random()*5); //Generating a random number between 0 and 4 (inclusive) and rounding down
-}
+let guesses = 0;
+let hits = 0;
+let isSunk = false;
+let guess;
+let accuracy;
+let roundAccuracy;
+
 // The regular expression ^\d+$ ensures that the entire string consists of one or more digits. 
 //If there are any non-digit characters in the string or if the digits are not at the start and end of the string, the pattern won't match
 let numberPattern = /^\d+$/; 
 
-let guesses = 0;
-let hits = 0;
-let isSunk = false;
-// let guessTxt;
-let guess;
-let accuracy;
-let roundAccuracy;
+//Random number between 0 and 4 (inclusive)
+function getRandomNo() {
+    return Math.floor(Math.random()*5); //Generating a random number between 0 and 4 (inclusive) and rounding down
+}
 
 while(isSunk === false) {
     //Setting the locations of the ship (3 slots big)
@@ -36,7 +36,7 @@ while(isSunk === false) {
             //Checking if the hit variable is strictly equal to 3. If yes, then the while loop becomes true and breaks
             if (hits === 3) {
                 isSunk = true;
-                alert("You sank the battleship!")
+                alert("You sank the battleship!");
             }
         }   
     } 
@@ -53,5 +53,5 @@ while(isSunk === false) {
     roundAccuracy = parseFloat(accuracy).toFixed(2);
 
 }
-console.log("Guesses: " + guesses + ", Accuracy: " + roundAccuracy + "%")
-alert("Guesses: " + guesses + ", Accuracy: " + roundAccuracy + "%")
+console.log("Guesses: " + guesses + ", Accuracy: " + roundAccuracy + "%");
+alert("Guesses: " + guesses + ", Accuracy: " + roundAccuracy + "%");
